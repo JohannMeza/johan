@@ -1,0 +1,131 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: var(--color-primary);
+  position: fixed;
+  z-index: 9000000;
+  padding: 10px 25px;
+}
+
+  .header__logo {
+    width: 150px;
+  }
+
+  .header__logo img {
+    width: 100%;
+  }
+
+  .header__hamburgers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+
+  .header__hamburgers:active {
+    background: #0000006d;
+    
+  }
+
+.nav {
+  width: 100%;
+  height: calc(100vh - 62px);
+  top: 62px;
+  overflow-x: auto;
+  z-index: 10000;
+  left: -100%;
+  background: rgba(0, 0, 0, 0.956);
+  backdrop-filter: blur(25px);
+  position: fixed;
+  transition: left .5s ease;
+}
+
+  .nav-active {
+    left: 0%;
+  }
+
+  .nav__ul {
+    height: 80%;
+    min-height: 500px;
+    font-size: 1.2rem;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .nav__ul li {
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: padding .2s linear;
+  }
+
+  .nav__ul li:last-child {
+    padding: 10px 15px;
+    background: var(--color-third);
+  }
+  
+  .nav__ul li:hover:not(li:last-child) {
+    display: inline;
+    padding: 10px 15px;
+    border: 1px solid var(--color-third);
+    color: var(--color-third);
+  }
+
+  .nav__ul li:hover a {
+    color: inherit;
+  }
+
+@media screen and (min-width: 850px) {
+  .nav {
+    width: 80%;
+    overflow: visible;
+    position: relative;
+    height: auto;
+    top: 0;
+    left: 0;
+    background: none;
+  }
+
+  .nav__ul {
+    min-height: auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-direction: row;
+  }
+
+  .nav__ul li a {
+    font-size: 14px;
+  }
+
+  .nav__ul li {
+    padding: 0;
+  }
+
+  .nav__ul li:hover:not(li:last-child) {
+    display: inline;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid var(--color-third);
+    color: var(--color-third);
+  }
+
+  .nav__ul li:last-child {
+    padding: 5px 15px;
+    background: var(--color-third);
+  }
+
+  .header__hamburgers {
+    display: none;
+  }
+}
+  

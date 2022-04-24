@@ -1,0 +1,28 @@
+/* Colores */
+:root {
+  --color-primary: #222222;
+  --color-secondary: #F2ECFF;
+  --color-third: #FF00FF;
+}
+
+/* Font size */
+:root {
+  --size-title: 60px;
+  --size-subtitle: 30px;
+  --size-paragraph: 16px;
+  --size-title-large: 80px;
+
+  --size-text-small:  14px;
+  --size-text-medium: 16px;
+  --size-text-large: 18px;
+}
+
+:root {
+  --size_const: 0.5;
+}
+
+/* @media screen and (min-width: 750px) {
+  :root {
+    --size_const: 0.9;
+  }
+} */
